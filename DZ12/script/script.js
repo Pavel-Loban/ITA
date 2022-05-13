@@ -53,33 +53,21 @@
 
  //Счетчик задач, зачеркивание выполненных задач
  function getActiveList(){
-    var notDoneLi = 0;
-    var doneLi = 0;
-     for(let li of allLi){
-         done.value = doneLi;
-         notDoneLi = allLi.length;
-         notDone.value = allLi.length;
+    notDone.value = document.getElementsByTagName('li').length - done.value;
+    done.value = document.getElementsByClassName('text-decor').length;
+    for(let i of allLi){
+        i.onclick = function(){
+            if(i.classList.contains('text-decor')){
+                i.classList.remove('text-decor');
+                done.value = document.getElementsByClassName('text-decor').length;
+             } else{
+                i.classList.add('text-decor');
+            }
 
-        li.style.cssText = 'text-decoration: none; ';
-         li.onclick = function(){
-            if (li.style.cssText === 'text-decoration: none;'){
-             li.style.cssText = 'text-decoration: line-through;';
-            }
-            else{
-                 li.style.cssText = 'text-decoration: none;';
-                 doneLi--;
-                 done.value = doneLi;
-                 notDoneLi++;
-                 notDone.value = notDoneLi;
-            }
-            if(li.style.cssText === 'text-decoration: line-through;'){
-                doneLi++;
-                done.value = doneLi;
-                notDoneLi--;
-                notDone.value = notDoneLi;
-            }
-         };
-     }
+            done.value = document.getElementsByClassName('text-decor').length;
+            notDone.value = allLi.length - done.value;
+        };
+    }
  }
  getActiveList();
 
