@@ -55,13 +55,13 @@
  function getActiveList(){
     notDone.value = document.getElementsByTagName('li').length - done.value;
     done.value = document.getElementsByClassName('text-decor').length;
-    for(let i of allLi){
-        i.onclick = function(){
-            if(i.classList.contains('text-decor')){
-                i.classList.remove('text-decor');
+    for(let li of allLi){
+        li.onclick = function(){
+            if(li.classList.contains('text-decor')){
+                li.classList.remove('text-decor');
                 done.value = document.getElementsByClassName('text-decor').length;
              } else{
-                i.classList.add('text-decor');
+                li.classList.add('text-decor');
             }
 
             done.value = document.getElementsByClassName('text-decor').length;
