@@ -27,7 +27,7 @@
     newDate.innerText = ' - ' + date.getFullYear() + '.' + (date.getMonth() + 1) + '.'+ date.getDate();
 
     //Проверка,чтобы пустое поле ввода нельзя было добавить как задачу
-    if(inputValue !== ''){
+    if(inputValue.trim() !== ''){
         allLi.append(newSpan);
         allLi.append(newDate);// добавляем дату добавления задачи
         ulList.append(allLi);
