@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="row col-12 mt-5 p-form">
+      <!-- action="https://fe.it-academy.by/TestForm.php" -->
+      <form name="form" action="https://fe.it-academy.by/TestForm.php">
+        <div class=" d-flex justify-content-center mt-3">Для внесения вашего сайта в каталог, заполните форму: </div>
+        <!-- разработчики -->
+        <div class="row mt-3 mb-3 ">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Разработчики</label>
+          <div class="col-sm-10" id="div-input1">
+            <input type="text"  class="form-control p-input" id="developers" name="developer">
+            <!-- <textarea class="form-control" id="developers" rows="3"></textarea> -->
+          </div>
+          <div class="col-sm-6 error1 display">
+
+            <p class="error-message2 color-text " id="error-text">Поле обязательно должно быть заполнено</p>
+          </div>
+
+        </div>
+
+
+<!-- Название -->
+        <div class="row mb-3 ">
+          <label for="text" class="col-sm-2 col-form-label">Название сайта</label>
+          <div class="col-sm-10" id="div-input2">
+            <input type="text" class="form-control p-input" id="nameSite" name="siteName">
+          </div>
+          <div class="col-sm-6 error2 display">
+
+            <p class="error-message2 color-text " id="error-text2">Поле обязательно должно быть заполнено</p>
+          </div>
+        </div>
+
+        <!-- URL -->
+        <div class="row mt-3 mb-3 ">
+          <label for="text" class="col-sm-2 col-form-label">URL сайта</label>
+          <div class="col-sm-10" id="div-input3">
+            <input type="text" class="form-control p-input" id="urlSites" name="siteURL">
+          </div>
+          <div class="col-sm-6 error3 display">
+
+            <p class="error-message3 color-text " id="error-text3">Поле обязательно должно быть заполнено</p>
+        </div>
+      </div>
+
+      <!-- Data -->
+        <div class="row mt-3 mb-3 ">
+          <label for="text" class="col-sm-2 col-form-label">Дата запуска сайта</label>
+          <div class="col-sm-10" id="div-input4">
+            <input type="date" class="form-control p-input" id="opening_date" name="dateOpening">
+          </div>
+          <div class="col-sm-6 error4 display">
+
+            <p class="error-message4 color-text " id="error-text4">Поле обязательно должно быть заполнено</p>
+          </div>
+        </div>
+
+        <!-- visitor -->
+        <div class="row mt-3 mb-3 input">
+          <label for="text" class="col-sm-2 col-form-label">Посетители в сутки</label>
+          <div class="col-sm-10" id="div-input5">
+            <input type="text" class="form-control p-input" id="visitor_per_day" name="visitor">
+          </div>
+          <div class="col-sm-6 error5 display">
+
+            <p class="error-message5 color-text " id="error-text5">Поле обязательно должно быть заполнено</p>
+          </div>
+        </div>
+
+        <!-- e-mail -->
+        <div class="row mt-3 mb-3 input">
+          <label for="text" class="col-sm-2 col-form-label">E-mail для связи</label>
+          <div class="col-sm-10" id="div-input6">
+            <input type="text" class="form-control p-input" id="e_mail" name="email">
+          </div>
+          <div class="col-sm-6 error6 display">
+
+            <p class="error-message6 color-text " id="error-text6">Поле обязательно должно быть заполнено</p>
+          </div>
+        </div>
+
+        <!-- Select -->
+        <div class="row mt-3 mb-3 input">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Рубрика каталога</label>
+          <div class="col-sm-10" id="div-input7">
+            <select class="form-select p-input" aria-label="Default select example" id="select" name="selected">
+              <option selected>Выберите категорию</option>
+              <option value="Птицы">Птицы</option>
+              <option value="Рыбы">Рыбы</option>
+            </select>
+          </div>
+          <div class="col-sm-6 error7 display">
+
+            <p class="error-message7 color-text " id="error-text7">Поле обязательно должно быть заполнено</p>
+          </div>
+
+        </div>
+
+
+        <!-- Radio -->
+        <div class="row  mt-3 mb-3">
+          <legend class="col-form-label col-sm-2 pt-0">Размещение</legend>
+          <div class="col-sm-10 input" id="div-input9">
+
+              <input class="form-check-input" type="radio" name="accommodation" id="gridRadios1" value="бесплатное" >
+              <label class="form-check-label" for="gridRadios1">
+                бесплатное
+              </label>
+              <input class="form-check-input" type="radio" name="accommodation" id="gridRadios2" value="платное">
+              <label class="form-check-label" for="gridRadios2">
+                платное
+              </label>
+
+              <input class="form-check-input" type="radio" name="accommodation" id="gridRadios3" value="VIP" >
+              <label class="form-check-label" for="gridRadios3">
+                VIP
+              </label>
+
+          </div>
+          <div class="col-sm-6 error9 display">
+
+            <p class="error-message9 color-text " id="error-text9">Поле обязательно должно быть заполнено</p>
+          </div>
+
+        </div>
+
+<!-- checkbox -->
+        <div class="row mb-3 input">
+          <legend class="col-form-label col-sm-2 pt-0">Разрешить отзыв</legend>
+          <div class="col-sm-10 " id="div-input10">
+            <div class="form-check">
+              <input class="form-check-input " type="checkbox" id="gridCheck1" name="rewiew">
+              <label class="form-check-label" for="gridCheck1">
+                <!-- Example checkbox -->
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-6 error10 display">
+
+            <p class="error-message10 color-text " id="error-text10">Поле обязательно должно быть заполнено</p>
+          </div>
+        </div>
+
+        <!-- textarea -->
+        <div class="row mt-3 mb-3 input">
+          <label for="exampleFormControlTextarea1" class="form-label">Описание сайта</label>
+          <div class="col-sm-10" id="div-input8">
+          <textarea class="form-control p-input" id="textarea" rows="3" name="description"></textarea>
+        </div>
+          <div class="col-sm-6 error8 display">
+
+            <p class="error-message8 color-text " id="error-text8">Поле обязательно должно быть заполнено</p>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-3 mt-3 p-btn">Опубликовать</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

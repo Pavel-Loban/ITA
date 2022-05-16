@@ -1,0 +1,24 @@
+.p-form{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.p-radio{
+    display: inline;
+}
+
+.display{
+    display: none;
+}
+
+.color-text{
+    color: red;
+}
+
+/* .input{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+     margin: 10px 10px 10px 10px;
+} */
+
