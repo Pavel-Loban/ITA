@@ -83,7 +83,7 @@ costOfGoodsBtn.addEventListener('click', function () {
 //6
 
 var div = document.querySelector('#current-cart-items');
-var btnCount = document.querySelector('#current-cart').lastElementChild.lastElementChild.previousElementSibling;
+var btnCount = document.querySelector('#current-cart-items').lastElementChild.previousElementSibling;
 
 div.addEventListener('click', function (e) {
     if (e.target.dataset.btn === 'btn-pos') {
@@ -109,6 +109,7 @@ btnCount.addEventListener('click',function(){
         var total = elem.querySelector('.total');
 
         sum += Number(price.innerText) * total.value;
+        console.log(sum);
     });
 
     currentTotalItems.innerHTML = sum + ' $';
