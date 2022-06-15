@@ -79,7 +79,7 @@ const renderTempApp = async() => {
     const data = await getInfoWeatherForFiveDays(currentPlace);
     const withHeader = document.querySelector('.with-header');
 
-
+    withHeader.innerHTML = '';
     data.list.forEach((elem) => {
         const currentTemp = Math.round(elem.main.temp - 273);
 
